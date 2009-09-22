@@ -35,9 +35,6 @@ used in developing the code ( e.g. named_scopes, named_yield_or*, any method you
     end
   end
   
-This is easier to test each condition and build on them.  Making code dry and easier to maintain.
-
-
 Well this is the main features of this gem right now.  I'm working on the dynamic reporting so keep watching.
 
    
