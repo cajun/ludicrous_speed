@@ -1,7 +1,43 @@
-= ludicrous_speed
+=== *Colonel Sandurz:* Prepare ship for light speed. 
+=== *Dark Helmet:* No, no, no, light speed is too slow. 
+=== *Colonel Sandurz:* Light speed, too slow? 
+=== *Dark Helmet:* Yes, we're gonna have to go right to ludicrous speed.
 
-Description goes here.
+= You are now traveling at Ludicrous speed
 
-== Copyright
+This will provide a generic way to save off ActiveRecord queries.  So what does that mean to you?
+Dynamic Reporting!!!  This is the start of a new power in reporting systems.  The goal of this project 
+is to allow 80% of users to generate reports of their own easily and use the same powerful techniques you 
+used in developing the code ( e.g. named_scopes, named_yield_or*, any method you expose )
 
-Copyright (c) 2009 cajun. See LICENSE for details.
+== Example of what you got now.
+
+  class Foo < ActiveRecord::Base
+    named_yield_or( :w00t, { :conditions => "shoes = 'carpet'" } )
+    named_scope( :omg, { :conditions => "shoes = 'carpet'" } )
+  end
+  
+  Foo.w00t # => returns all records where shoes = 'carpet' -- guessed you figured that one
+  Foo.omg # => see comment above
+  
+=== Ok dude you didn't do anything new.  Wait named_yield_or has one major advantage
+  
+  Foo.w00t { Foo.first } # => returns the first record where shoes = 'carpet'
+  Foo.omg { Foo.first } # => the block doesn't change anything on this method
+  
+=== Now what can you do with it?
+  
+  Foo.active do
+    Foo.with_bacon do
+      Foo.with_limit( 100 ) do
+        Foo.find( :all )
+      end
+    end
+  end
+  
+This is easier to test each condition and build on them.  Making code dry and easier to maintain.
+
+
+Well this is the main features of this gem right now.  I'm working on the dynamic reporting so keep watching.
+
+   
