@@ -1,7 +1,7 @@
-=== *Colonel Sandurz:* Prepare ship for light speed. 
-=== *Dark Helmet:* No, no, no, light speed is too slow. 
-=== *Colonel Sandurz:* Light speed, too slow? 
-=== *Dark Helmet:* Yes, we're gonna have to go right to ludicrous speed.
+=== *Colonel Sandurz:*:: Prepare ship for light speed. 
+=== *Dark Helmet:*:: No, no, no, light speed is too slow. 
+=== *Colonel Sandurz:*:: Light speed, too slow? 
+=== *Dark Helmet:*:: Yes, we're gonna have to go right to ludicrous speed.
 
 = You are now traveling at Ludicrous speed
 
