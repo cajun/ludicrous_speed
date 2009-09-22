@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["cajun"]
-  s.date = %q{2009-09-21}
+  s.date = %q{2009-09-22}
   s.email = %q{zac@kleinpeter.org}
   s.extra_rdoc_files = [
     "LICENSE",
@@ -20,6 +20,10 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/ludicrous_speed.rb",
+     "lib/ludicrous_speed/columns.rb",
+     "lib/ludicrous_speed/model.rb",
+     "lib/ludicrous_speed/named_yield_or.rb",
+     "ludicrous_speed.gemspec",
      "spec/ludicrous_speed_spec.rb",
      "spec/spec_helper.rb"
   ]
