@@ -18,6 +18,6 @@ ActiveRecord::Migration.create_table :foos do |t|
 end
 
 class Foo < ActiveRecord::Base
-  name_yield_or( :bar, { :conditions => "_why = 'bacon'" } )
-  name_yield_or( :omg, lambda{ |x,y| { :conditions => "#{x} != #{y}" } } )
+  named_yield_or( :bar, { :conditions => "_why = 'bacon'" } )
+  named_yield_or( :omg, lambda{ |x,y| { :conditions => "#{x} != #{y}" } } )
 end

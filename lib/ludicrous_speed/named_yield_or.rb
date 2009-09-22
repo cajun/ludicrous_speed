@@ -1,7 +1,7 @@
 module LudicrousSpeed
   module NamedYieldOr
     attr_accessor :definitions
-    def name_yield_or( method_name, options )
+    def named_yield_or( method_name, options )
       method_name = method_name.to_sym
       self.definitions ||= {}
       self.definitions[method_name] = lambda do |*args|
