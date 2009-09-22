@@ -20,20 +20,23 @@ used in developing the code ( e.g. named_scopes, named_yield_or*, any method you
   Foo.w00t # => returns all records where shoes = 'carpet' -- guessed you figured that one
   Foo.omg # => see comment above
   
-=== Ok dude you didn't do anything new.  Wait named_yield_or has one major advantage
+=== Ok dude you didn't do anything new.  Wait named_yield_or major difference.  It uses blocks
   
   Foo.w00t { Foo.first } # => returns the first record where shoes = 'carpet'
-  Foo.omg { Foo.first } # => the block doesn't change anything on this method
+  Foo.omg.first # => see comment above
   
 === Now what can you do with it?
   
   Foo.active do
     Foo.with_bacon do
       Foo.with_limit( 100 ) do
-        Foo.find( :all )
+        Foo.has_bar( bar )
       end
     end
   end
+  
+  Foo.active.with_bacon.with_limit( 100 ).has_bar( bar )
+  
   
 Well this is the main features of this gem right now.  I'm working on the dynamic reporting so keep watching.
 
