@@ -14,16 +14,13 @@ used in developing the code ( e.g. named_scopes, named_yield_or*, any method you
 
   class Foo < ActiveRecord::Base
     named_yield_or( :w00t, { :conditions => "shoes = 'carpet'" } )
-    named_scope( :omg, { :conditions => "shoes = 'carpet'" } )
   end
   
   Foo.w00t # => returns all records where shoes = 'carpet' -- guessed you figured that one
-  Foo.omg # => see comment above
   
 === Ok dude you didn't do anything new.  Wait named_yield_or major difference.  It uses blocks
   
   Foo.w00t { Foo.first } # => returns the first record where shoes = 'carpet'
-  Foo.omg.first # => see comment above
   
 === Now what can you do with it?
   
@@ -35,7 +32,6 @@ used in developing the code ( e.g. named_scopes, named_yield_or*, any method you
     end
   end
   
-  Foo.active.with_bacon.with_limit( 100 ).has_bar( bar )
   
   
 Well this is the main features of this gem right now.  I'm working on the dynamic reporting so keep watching.
