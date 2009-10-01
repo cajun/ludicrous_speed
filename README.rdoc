@@ -18,7 +18,7 @@ used in developing the code ( e.g. named_scopes, named_yield_or*, any method you
   
   Foo.w00t # => returns all records where shoes = 'carpet' -- guessed you figured that one
   
-=== Ok dude you didn't do anything new.  Wait named_yield_or major difference.  It uses blocks
+=== And
   
   Foo.w00t { Foo.first } # => returns the first record where shoes = 'carpet'
   
